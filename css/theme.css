@@ -19,7 +19,7 @@ body {
 
 /* layout.css Style */
 .upload-drop-zone {
-  height: 80px;
+  height: 70px;
   border-width: 2px;
   margin-bottom: 20px;
 }
@@ -29,7 +29,7 @@ body {
   color: #ccc;
   border-style: dashed;
   border-color: #ccc;
-  line-height: 80px;
+  line-height: 70px;
   text-align: center
 }
 .upload-drop-zone.drop {
