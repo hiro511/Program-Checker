@@ -22,6 +22,12 @@ function refreshInlineFrame(){
   document.getElementsByTagName('iframe')[0].contentWindow.location.replace("http://ideone.com/");
 }
 
+function createCommands(filename){
+  var programName = filename.split('.')[0];
+  return  '<pre><strong id="commands-copy">gcc -o ' + programName + ' ' +
+          filename + ' ; ./' + programName + '</strong></pre>';
+}
+
 function handleFileSelect(evt) {
   evt.stopPropagation();
   evt.preventDefault();
@@ -32,6 +38,7 @@ function handleFileSelect(evt) {
     var sourceCode = escapeSourceCode(event.target.result);
     document.getElementById('list').innerHTML = sourceCode;
     document.getElementById('filename').innerHTML = '<h4><strong>' + file.name + '</strong></h4>';
+    document.getElementById('commands').innerHTML = createCommands(file.name);
   };
 
   reader.readAsText(file);
