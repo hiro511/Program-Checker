@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Program Checker</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/theme.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Program Checker</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container theme-showcase" role="main">
+    <div class="row">
+      <p class="lead">1. Upload the Source Code</p>
+    </div>
+
+    <div class="row">
+      <div class="upload-drop-zone" id="drop_zone">
+        Drop the Source Code Here
+      </div>
+    </div>
+
+    <div class="row">
+      <p class="lead">2. Check the Logic</p>
+      <p>
+        Copy the source code after checking.
+      </p>
+    </div>
+
+    <div class="row" id="code-view">
+      <div class="col-sm-11" id="filename">
+        <h4><strong>HelloWorld.c</strong></h4>
+      </div>
+      <div class="col-sm-1">
+        <button class="btn btn-primary" data-clipboard-action="copy" data-clipboard-target="#list">Copy</button>
+      </div>
+
+    </div>
+    <div class="row">
+      <figure class="highlight">
+        <pre><code class="language-c" data-lang="html" id="list">#include &lt;stdio.h&gt;
+
+int main(void){
+  printf(&quot;Hello World\n&quot;);
+
+  return 0;
+}</code></pre>
+      </figure>
+    </div>
+
+    <div class="row">
+      <p class="lead">3. Run <small>suppoted by <strong>ideone.com</strong></small></p>
+      <p>
+        Paste below and click the Run button.<br/>
+        If you want to input stdin, click the stdin button and enter input.
+      </br/>
+      </p>
+    </div>
+
+    <div class="row" >
+      <iframe id="run-view" src="http://ideone.com/" width="100%" height="1000px"></iframe>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- Clipboard.js for copy to the clipboard -->
+  <script src="js/clipboard.min.js"></script>
+  <!-- Custom javascript for Program Checker for C -->
+  <script src="js/pc.js"></script>
+
+  </body>
+</html>
